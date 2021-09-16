@@ -5,5 +5,5 @@ SCRUM_Team_CicloIII.
 -Jose Antonio Valencia Aricapa (Administrador Base de Datos-Desarrollador)
 -Evelin Andreina Mendoza Niño (Analista - Scrum Master)
 -Alvaro Hernán Ruiz Macías (Scrum Master - Product Owner)
--Alejandro Torres Pino (Desarrollador)
+-Hugo Alejandro Torres Pino (Desarrollador)
 -Jhon Alexander Hernández Amaya (Analista)
