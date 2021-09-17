@@ -1,0 +1,112 @@
+#ETIQUETAS EN HTML
+Las etiquetas o marcas delimitan cada uno de los elementos que componen un documento HTML. 
+Hay dos tipos de etiquetas: la de comienzo de elemento y la de fin o cierre de elemento. 
+
+#ETIQUETAS ANIDADAS
+<p align="center">
+	<font color="#993366" size="4" face="Comic Sans MS, Arial, MS Sans Serif">
+	Bienvenidos a www.aulaclic.com
+	</font>
+</p>
+
+ESTRUCTURA GENERAL
+<html>
+	<head>
+	…
+	
+	</head>
+	<body>
+	…
+	
+	</body>
+</html>
+
+
+ETIQUETA <html> </html>
+
+• Identifica el tipo de documento
+• Todas las páginas web escritas en HTML tienen que tener la extensión html o htm. Al mismo tiempo, tienen que tener las etiquetas <html> y </html>.
+• Entre las etiquetas <html> y </html> estará comprendido el resto del código html de la página
+
+Cabecera  <head> </head>
+
+• Se utiliza para agrupar información sobre la página, como puede ser el título. 
+• Está formada por las etiquetas  y . La etiqueta  va justo debajo de la etiqueta . 
+• Entre las etiquetas podemos encontrar etiquetas como: 
+	<link> <style> <script>
+	<meta>
+	<title> 
+
+ETIQUETA <title> </title>
+<html>
+	<head>
+		<title>
+			Introduction HTML
+		</title>
+	</head>
+</html>
+
+
+Etiqueta <link>
+• La etiqueta  define un enlace entre el documento y algún recurso externo. 
+• El elemento link debe ser ubicado en la sección head del documento. 
+• rel: escribe la relación entre el documento y el destino del enlace. 
+• type: especifica el tipo de documento a enlazar. El más común es type=”text/css”. 
+• href: especifica la localización del documento enlazado.
+		
+Etiqueta  <style>
+
+• La etiqueta <style> define hojas de estilo para el documento actual.
+• Esta etiqueta debe ser ubicada en la cabecera del documento.
+
+Etiqueta <meta>
+
+• Se utiliza para añadir información sobre la página. Esta información puede ser utilizada por los buscadores. 
+• Los buscadores consultan la información de la etiqueta . 
+• Se pueden especificar los atributos name (tipo de información) y content (valor de dicha información).
+• No necesita etiqueta de cierre. 
+• También se utiliza para indicarle al navegador alguna información o alguna acción que debe realizar. En este caso se utiliza el atributo http-equiv
+
+Etiqueta <body>
+• El cuerpo del documento contiene la información propia del documento, es decir, lo que queremos que se visualice, el texto de la página, las imágenes, los formularios, etc.
+
+Etiqueta <p> </p>
+• Introducir texto en la página. 
+• Varios espacios en blanco: &nbsp  
+• Salto de línea: <br>
+
+Enlaces <a> </a>
+Un hiperenlace, hipervínculo o vínculo no es más que un enlace, que al ser pulsado lleva a una página o archivo. 
+• Aquellos elementos (texto, imágenes, etc.) sobre los que se desee insertar un enlace han de encontrarse entre las etiquetas  y .
+ • A través del atributo href se especifica la página o el archivo a la que está asociado el enlace. 
+
+Enlaces
+• Referencia absoluta 
+• Referencia relativa al sitio: 
+	• <a href="/nombreDelArchivo.html"> Ir a … </a>
+	
+• Punto de fijación: 
+	• <a href="nombreDocumento.html #nombrePunto"> Ir a punto </a>
+
+• _blank: 
+	• Abre el documento vinculado en una ventana nueva del navegador. 
+• _self: 
+	• Es la opción predeterminada. Abre el documento vinculado en el mismo marco o ventana que el vínculo
+
+Estilos enlaces  <a> </a>
+• link permite determinar el color de los enlaces sin visitar (enlace que no ha sido pulsado ninguna vez). 
+• active permite determinar el color del enlace activo (enlace que acaba de ser pulsado). 
+• visited permite determinar el color de los enlaces visitados (enlaces que ya han sido pulsados). 
+
+Tablas <table> </table>
+• Las tablas están formadas por celdas, que son los recuadros que se obtienen como resultado de la intersección entre una fila y una columna: 
+
+<table> </table>
+<tr> </tr>
+<td> </td>
+
+
+
+
+
+
