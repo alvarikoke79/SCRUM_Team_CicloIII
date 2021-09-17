@@ -5,7 +5,7 @@ Se propone analizar, diseñar y construir una aplicación software que permita c
 
 Alcances, la aplicación web debe contar con los siguientes módulos:  
 
-Prueba de pull
+
 
 ● Módulo administrador de ventas. Permite ingresar o registrar los pedidos realizados por cada uno de los clientes. 
 Deberá tener un identificador único de venta, almacenar el valor total de la venta y la descripción detallada de la 
