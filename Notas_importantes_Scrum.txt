@@ -1,6 +1,7 @@
 Notas importantes extraidas de la asesoría presentada el día 15 de septiembre de 2021 
 
 1. Las historias de usuario que se encuentran en cada uno de los sprints definidos en la pagina del lms, deben estar en tablero de Trello (de ser necesario se pueden colocar nuevas historias de usuario).
+	1.1 Los temas generales, tambien definidos como historias épicas pueden ser desglosadas en varias historias de usuario 
 2. Cada historia de usuario debe comenzar sin asignación de responsable en el backlog.
 3. Cada historia de ususario debe de estar en una etiqueta diferente con la posibilidad de añadir un check box. 
 4. La asignación de los responsables del a historia de ususario se indica en la columna To do.
