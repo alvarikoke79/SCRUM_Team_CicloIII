@@ -1,13 +1,13 @@
 body{
   background-color: #dfe6f1;;
 }
-/*.Desktop---1 {
+.Desktop---1 {
   width: 100%;
   height: 100%;
   flex-grow: 0;
   padding: 0 333px;
   background-color: #dfe6f1;;
-}*/
+}
 img{
   position:absolute;
    left:50%;
