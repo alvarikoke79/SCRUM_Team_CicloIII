@@ -13,9 +13,13 @@ https://developers.google.com/identity/sign-in/web/
 
 
 Pasos para probra el codigo:
+
+npm init
 npm install lite-server --save-dev
 
 agregar "dev":"lite-server" en el fichero package.json dentro de "srcipts"
+
+pasar todos los archivos creador a la carpeta controlsales
 
 para inicializar el servidor:
 npm run dev
