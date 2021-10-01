@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   /* background-color: #dfe6f1;*/
-  background-color: aqua;
+  background-color: #ffffff;
 }
 /* Layout3 */
 .Layout3 {
@@ -83,9 +83,29 @@ img {
   height: 103px;
   left: 0px;
   top: 700px;
-  background: #c4c4c4;
+  background-color: #c4c4c4;
   border: 1px solid #000000;
   box-sizing: border-box;
+}
+.BTG_usuarios {
+  position: absolute;
+  width: 301px;
+  height: 65px;
+  left: 22px;
+  top: 21px;
+  background: #A8B9D8;
+  border: 1px solid #1e4a9a;
+  box-sizing: border-box;
+  border-radius: 12px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.BTG_usuarios:hover {
+  background-color: #1e4a9a;
 }
 
 .Cerrar_sesion {
@@ -105,7 +125,7 @@ img {
   height: 65px;
   left: 0px;
   top: 0px;
-  background: #5c739c;
+  background: #1e4a9a;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 12px;
@@ -116,6 +136,9 @@ img {
   line-height: 30px;
 
   color: #ffffff;
+}
+.buttoncs:hover {
+  background-color: #a8b9d8;
 }
 
 .Mod_admin_product {
@@ -160,7 +183,7 @@ img {
   left: 23px;
   top: 102px;
   background: #a8b9d8;
-  border: 1px solid #1e4a9a;
+  border: 1px solid #1a1a1b;
   box-sizing: border-box;
   border-radius: 12px;
   font-family: Roboto;
@@ -169,4 +192,10 @@ img {
   font-size: 26px;
   line-height: 30px;
   color: #ffffff;
+}
+.button:hover {
+  background-color: #1e4a9a;
+}
+.button:active {
+  background-color: #1e4a9a;
 }
