@@ -1,0 +1,210 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+body{
+	background: #1e4a99;
+	font-family: sans-serif;
+  font-weight: bold;
+	width: 100%;
+	height: auto;
+    
+}
+
+#main-container{
+	background: white;
+	margin: 0px auto;
+	width: 85%;
+	height: 100%;
+}
+
+#containerlogueo{
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.box{
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+.imgprincipal {
+  width: 95%;
+  height: 95%;
+  display: block;
+  padding-top: 2%;
+  padding-left: 2%;
+
+}
+.logo{
+  border: #054d94 .25vw solid;
+}
+.modulo{
+  height: 21vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  border: #054d94 .25vw solid;
+  background-color: #c4c4c4;
+}
+.modulo p{
+  padding-top: 2vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-bottom: 2vw;
+  font-size: 1.9vw;
+}
+.botonlat{
+  background-color:#a8b9d8;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 0vw;
+  padding: 1vw;
+  border: #3b61a7 .15vw solid;
+  border-radius: 1vw;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1.69vw ;
+  font-family: sans-serif;
+}
+.modulo1{
+  height: 5vw;
+  font-family: sans-serif;
+  font-weight: bold;
+  border: #054d94 .25vw solid;
+  background-color: #c4c4c4;
+}
+.botonlat1{
+  background-color:#5c739c;
+  padding: 1vw;
+  border: #3b61a7 .15vw solid;
+  border-radius: 1vw;
+  text-align: center;
+}
+.botonlat a{
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 1.69vw ;
+}
+.box1{
+  width: 70%;
+  height: auto;
+  float: left;
+  background-color: #DFE6F1;
+}
+
+.columna1{
+    width: 100%;
+    height:100%;
+    float: left;
+}
+
+.columna1 p{
+  font-size: 2vw;
+}
+
+.descripcion{
+  margin: 2vw;
+}
+.descripcion p{
+  margin: 1vw;
+}
+.descripcion input[type="text"]{
+  background-color: #c4c4c4;
+  width: 50vw;
+  height: 20vw;
+  border-radius: 2vw;
+  border: 0px;
+}
+
+.interfaz_RegProducto {
+    font-family: sans-serif;
+    font-size: 3vw;
+    margin-bottom: 10vw;
+    margin-top: 1vw;
+    text-align: center;
+}
+
+.logueo{
+	text-align: center;
+	padding-top: 10%;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+.moduloID{
+    height: 50vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: #054d94 .25vw;
+    margin-left: 2vw;   
+}
+
+.Idproducto{
+  margin-left: 2vw;
+  margin-top: 4vw;
+}
+.Idproducto p{
+  margin-left: 2vw;
+}
+.Idproducto input[type="text"]{
+  background-color: #7f7f7f;
+  width: 18vw;
+  height: 3vw;
+  border-radius: 1vw;
+  border: 0px;
+  margin-left: 2vw;
+}
+.Idproducto input[type="submit"]{
+  background-color: #3b61a7;
+  width: 10vw;
+  height: 3vw;
+  border-radius: 1vw;
+  color: #FFFFFF;
+  border: 0px;
+  font-size: 2vw;
+  margin-left: 2vw;
+}
+.Idproducto1{
+  margin: 2vw;
+}
+.Idproducto1 p{
+  margin: 2vw;
+}
+.Idproducto1 input[type="text"]{
+  background-color: #c4c4c4;
+  width: 18vw;
+  height: 3vw;
+  border-radius: 1vw;
+  border: 0px;
+}
+
+.botonEditar input[type="submit"]{
+  background-color: #3b61a7;
+  width: 13vw;
+  height: 3vw;
+  border-radius: 1vw;
+  color: #FFFFFF;
+  border: 0px;
+  font-size: 1.5vw;
+  margin-left: 9vw;
+  margin-top: 2vw;
+}
+
+.disponibilidad{
+  margin-left: 1vw;
+  margin-right: 2vw;
+  margin-bottom: 0vw;
+  margin-top: 2vw;
+  padding: 2vw;
+	text-align: left;
+  font-size: 2vw;
+  background: #DFE6F1;
+}
+select{
+  padding: 0.5vw;
+  font-size: 1.4vw;
+}
