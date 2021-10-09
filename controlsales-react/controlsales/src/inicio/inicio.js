@@ -25,7 +25,7 @@ function Inicio() {
                   <div className="modulo">
                       <p>Modulo administrador de ventas:</p>
                       <div className="botonlat">
-                          <a href="">Registro de Ventas</a>
+                      <Link to  = '/RegistrodVentas'>Registro de Ventas</Link>
                       </div>
                       <div className="botonlatMV">
                           <Link to = '/maestrodVentas'>Maestro de Ventas</Link>
@@ -33,7 +33,7 @@ function Inicio() {
                   </div>
                   <div className="modulo1">
                       <div className="botonlat">
-                          <a href="">Gestión de Usuarios</a>
+                      <Link to  = '/GestionUsuario'>Gestion de usuarios</Link>
                       </div>
                   </div>
                   <div className="salir">
