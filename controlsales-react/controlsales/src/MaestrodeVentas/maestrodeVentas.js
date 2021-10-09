@@ -27,10 +27,11 @@ function maestrodeVentas(){
                         <a href="">Maestro de Productos</a>
                     </div>
                 </div>
+                
                 <div className="modulo">
                     <p>Modulo administrador de ventas:</p>
                     <div className="botonlat">
-                        <a href="">Registro de Ventas</a>
+                        <Link to  = '/RegistroDeVenta'>Registro de Ventas</Link>
                     </div>
                     <div className="botonlatMV">
                         <Link to  = '/maestrodVentas'>Maestro de Ventas</Link>

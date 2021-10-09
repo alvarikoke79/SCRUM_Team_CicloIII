@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Inicio  from './inicio/inicio';
 import MaestrodV from './MaestrodeVentas/maestrodeVentas';
+import RegistroDeVenta from './RegistroDeVenta/RegistroDeVenta';
 
 
 
@@ -23,6 +24,12 @@ function App() {
           <MaestrodV/>
           
         </Route>
+
+        <Route path='/RegistroDeVenta'>
+          <RegistroDeVenta/>
+          
+        </Route>
+
         <Route path='/'>
           <Inicio/> 
         </Route>
