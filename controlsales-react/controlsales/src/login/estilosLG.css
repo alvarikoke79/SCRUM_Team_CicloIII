@@ -1,0 +1,129 @@
+.mainframe{
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dfe6f1;
+  }
+  .login {
+    position: absolute;
+    width: 1159px;
+    height: 588px;
+    margin-top:-294px;
+    top: 50%;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    border-radius: 12px;
+  }
+  .Landing {
+    position: absolute;
+    width: 542px;
+    height: 407px;
+    left: 73px;
+    top: 103px;
+    background: #dfe6f1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+  }
+  .Txlanding {
+    /* Txlanding */
+    position: absolute;
+    width: 506px;
+    height: 283px;
+    left: 18px;
+    top: 90px;
+  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+  
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  img {
+    /* img_logo */
+    position: absolute;
+    width: 449px;
+    height: 234px;
+    left: 662px;
+    top: 38px;
+  }
+  .frame_login {
+    /* frame_login */
+    position: absolute;
+    width: 544px;
+    height: 294px;
+    left: 615px;
+    top: 294px;
+  }
+  
+  .usuario {
+    /* Input_pass */
+    position: absolute;
+    width: 400px;
+    height: 50px;
+    left: 72px;
+    top: 12px;
+    border-radius: 6px;
+    font-family: Roboto;
+    font-size: 20px;
+  
+    background-color: #c4c4c4;
+  }
+  .pass {
+    position: absolute;
+    width: 400px;
+    height: 50px;
+    left: 72px;
+    top: 85px;
+    border-radius: 6px;
+    font-family: Roboto;
+    font-size: 20px;
+    background-color: #c4c4c4;
+  }
+  .Ini_sesion {
+    position: absolute;
+    width: 400px;
+    height: 63px;
+    left: 72px;
+    top: 163px;
+  }
+  .button {
+    /* Boton_iniciarSesion */
+    position: absolute;
+    width: 206px;
+    height: 40px;
+    left: 0px;
+    top: 14px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+  
+    color: #c4c4c4;
+    background: #1e4a9a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  .O {
+    /* O */
+    position: absolute;
+    width: 14px;
+    height: 23px;
+    left: 240px;
+    top: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .g-signin2 {
+    /* logologin 1 */
+    position: absolute;
+    left: 288px;
+    top: 15px;
+  }
