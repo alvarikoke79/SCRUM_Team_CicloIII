@@ -8,9 +8,8 @@ import {
 } from "react-router-dom";
 import Inicio  from './inicio/inicio';
 import MaestrodV from './MaestrodeVentas/maestrodeVentas';
-import RegistroDeVenta from './RegistroDeVenta/RegistroDeVenta';
-
-
+/*import Login  from './login/loginpage';*/
+import GUsuarios from './GestionUsuarios/Gusuarios'
 
 
 
@@ -20,19 +19,22 @@ function App() {
 
     <Router>
       <Switch>
-        <Route path='/maestrodVentas'>
-          <MaestrodV/>
-          
+        <Route path='/GestionUsuario' exact>
+          <GUsuarios/>
         </Route>
 
-        <Route path='/RegistroDeVenta'>
-          <RegistroDeVenta/>
-          
+        <Route path='/maestrodVentas' exact>
+          <MaestrodV/>  
         </Route>
 
-        <Route path='/'>
+        <Route path='/' exact>
           <Inicio/> 
         </Route>
+{/*
+        <Route path='/' exact>
+          <Login/> 
+        </Route>
+*/ }          
       </Switch>
       
     </Router>
