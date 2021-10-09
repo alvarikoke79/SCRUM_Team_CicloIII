@@ -32,7 +32,7 @@ function App() {
             placeholder="Contraseña"
           />
         <div className="Ini_sesion">
-            <input className="button" type="submit" value="Iniciar Sesion" />
+            <input className="button" type="submit" value="Iniciar Sesión" />
             <span className="O"> O </span>
             <div
               className="g-signin2"
