@@ -39,7 +39,7 @@ function RegistroDeVenta(){
 
 				<div className="modulo1">
 					<div className="botonlat">
-						<a href="">Gestión de Usuarios</a>
+					<Link to  = '/GestionUsuario'>Gestion de usuarios</Link>
 					</div>
 				</div>
 				<div className="salir">
