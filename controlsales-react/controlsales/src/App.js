@@ -4,11 +4,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+
 } from "react-router-dom";
 import Inicio  from './inicio/inicio';
 import MaestrodV from './MaestrodeVentas/maestrodeVentas';
 import RegistrodV from './RegistroDeVenta/RegistroDeVenta';
+import RegistrodP from './RegistroProducto/RegistroProducto';
 /*import Login  from './login/loginpage';*/
 import GUsuarios from './GestionUsuarios/Gusuarios'
 
@@ -29,6 +30,10 @@ function App() {
         </Route>
         <Route path='/RegistrodVentas' exact>
           <RegistrodV/>  
+        </Route>
+
+        <Route path='/RegistroProducto' exact>
+          <RegistrodP/>  
         </Route>
 
         <Route path='/' exact>

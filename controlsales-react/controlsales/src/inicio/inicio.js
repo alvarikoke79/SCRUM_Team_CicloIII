@@ -16,7 +16,7 @@ function Inicio() {
                   <div className="modulo">
                       <p>Modulo administrador de productos:</p>
                       <div className="botonlat">
-                          <a href="">Registro de Productos</a>
+                          <Link to='/RegistroProducto'>Registro de Productos</Link>
                       </div>
                       <div className="botonlat">
                           <a href="">Maestro de Productos</a>
