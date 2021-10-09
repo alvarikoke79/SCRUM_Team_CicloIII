@@ -28,7 +28,7 @@ function Gusuarios(){
 			<div className="modulo">
 				<p>Gestion de Usuarios:</p>
 				<div className="botonlat">
-					<a href="">Registro de Ventas</a>
+				<Link to  = '/RegistrodVentas'>Registro de Ventas</Link>
 				</div>
 				<div className="botonlat">
                 <Link to  = '/maestrodVentas'>Maestro de Ventas</Link>

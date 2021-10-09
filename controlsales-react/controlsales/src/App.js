@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Inicio  from './inicio/inicio';
 import MaestrodV from './MaestrodeVentas/maestrodeVentas';
+import RegistrodV from './RegistroDeVenta/RegistroDeVenta';
 /*import Login  from './login/loginpage';*/
 import GUsuarios from './GestionUsuarios/Gusuarios'
 
@@ -25,6 +26,9 @@ function App() {
 
         <Route path='/maestrodVentas' exact>
           <MaestrodV/>  
+        </Route>
+        <Route path='/RegistrodVentas' exact>
+          <RegistrodV/>  
         </Route>
 
         <Route path='/' exact>
