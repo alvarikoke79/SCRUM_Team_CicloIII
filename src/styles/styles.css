@@ -4,10 +4,42 @@
     flex-direction: column;
     justify-content:space-between;
 }
-
+/*public layout*/
 .mainpuly{
  height:100%;
  overflow: scroll;
  background-color:blue;
 
-}   
+} 
+/*sidebar*/
+.sidebarmain{
+    width: 288px;
+    background-color:#1e4a99;
+}  
+
+/*PrivateLayout*/
+.mainprly{
+    display:flex;
+    width:100%;
+    height: 100vh;
+    
+}
+/*main del privatelayout*/
+.contentprly{
+    display:flex;
+    width:100%;
+    background-color:pink;
+    overflow: scroll;
+}
+/*navbar*/
+.mainaNavbar{
+    background-color:red;
+}
+.listnavbar{
+    display:flex;
+    width:fullwidth;
+    justify-content:space-between;
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

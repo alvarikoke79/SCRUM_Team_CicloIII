@@ -4,9 +4,10 @@ import React from 'react';
 
 const PrivateLayout = ({children}) => {
     return (
-        <div>
+        <div className = 'mainprly'>
         <Sidebar/>
-        {children}
+        <main className='contentprly'>{children}</main>
+        
         </div>
     )
 }

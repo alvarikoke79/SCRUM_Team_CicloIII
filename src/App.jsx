@@ -2,8 +2,8 @@ import Login from 'pages/Login';
 import Registro from 'pages/Registro';
 import Index from 'pages/Index';
 import Admin from 'pages/admin/Index';
-import Clientes from 'pages/Clientes';
-import Vehiculos  from 'pages/Vehiculos';
+import Clientes from 'pages/admin/Clientes';
+import Vehiculos  from 'pages/admin/Vehiculos';
 
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import 'styles/styles.css'
@@ -30,13 +30,13 @@ function App() {
         </Switch>
       </PrivateLayout>      
       </Route>  
-      <Route path={['/login','/resgistro']}>
+      <Route path={['/login','/registro']}>
         <AuthLayout>
           <Switch>
             <Route path = '/login'>
               <Login/>
             </Route>
-            <Route path ='registro'>
+            <Route path ='/registro'>
               <Registro/>
             </Route>
           </Switch>
