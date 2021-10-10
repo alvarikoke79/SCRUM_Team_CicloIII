@@ -3,7 +3,7 @@ import React from 'react'
 const Admin = () => {
     return (
         <div>
-           Admin 
+           Index del panel de Admin 
         </div>
     )
 }

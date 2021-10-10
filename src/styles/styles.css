@@ -5,8 +5,9 @@
     justify-content:space-between;
 }
 
-.mainply{
- height:300px;
- scroll-behavior:overflow ;
+.mainpuly{
+ height:100%;
+ overflow: scroll;
+ background-color:blue;
 
 }   

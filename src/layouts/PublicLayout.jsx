@@ -7,7 +7,7 @@ const PublicLayout = ({children}) => {
     return (
         <div className = 'principal'>
             <Navbar/>
-            <main>{children}</main>
+            <main className = 'mainpuly'>{children}</main>
             <Footer/>
         </div>
     )
