@@ -1,0 +1,12 @@
+.principal{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.mainply{
+ height:300px;
+ scroll-behavior:overflow ;
+
+}   
