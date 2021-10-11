@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
 
 const AuthLayout = ({children}) => {
     return (
-        <div>
-        Autenticacion    
+        <div className='mainAuly'>
+        Autenticacion  
+        <div  className ='childAutly'>
         {children}
+        </div>  
         </div>
-    )
-}
+    );
+};
 
 export default AuthLayout
