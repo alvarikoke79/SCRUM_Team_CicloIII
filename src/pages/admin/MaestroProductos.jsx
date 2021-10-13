@@ -2,32 +2,36 @@ import React from 'react'
 
 const clientes = () => {
     return (
-        <div className="mainMaPrdut">
-				<p className="titleMaPrdut">Registro de Productos</p>
-				<div className="Idproduct">
+        <div className="box1">
+			<div className="columna1">
+				<p className="titulo">Maestro de Productos</p>
+				<form action="">
+				<div className="Idproducto">
 					<p>ID de producto:</p>
-                   
 					<input type="text" name="user" required />
 					<input type="submit" value="Buscar"/>
 				</div>
-				<div className="Idproduct1">
+				<div className="Idproducto1">
 					<p>Valor Unitario:</p>
 					<input type="text" name="user" />
 				</div>
-				<div className="Idproduct1">
+				<div className="Idproducto1">
 					<p>Estado:</p>
 					<input type="text" name="user" />
 				</div>
-				<div className="DesProduct">
+				<div className="DetalleProducto">
 					<p>Descripción del producto:</p>
 					<input type="text" name="user"/>
 				</div>
-				<div className="butonEdit">
-					<input type="submit" value="Editar"/>
-					<input type="submit" value="Guardar"/>
+				<div className="botons">
+				<button className ='btnEdit' type='submit'>Editar</button>
+				<button className ='btnSave'type='submit'>Guardar</button>
+					
 				</div>
-				
+				</form>
 			</div>
+						
+		</div>
         
     )
 }

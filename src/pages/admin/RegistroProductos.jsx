@@ -4,20 +4,49 @@ import React, {useEffect, useState} from 'react';
 const vehiculos = () => {
     
     return (
-       
-       <div className = 'mainRegPrduct'>
-        <form className='formProductos'> 
-        <div className='titleRegProductts'>
-        <h2 >Formulario Registro de Productos </h2>
-        </div>
+
         
-            <input className = 'IdPrduct'  type="text" placeholder = 'Id del producto' />
-            <input className = 'DesPrduct' type="text" placeholder = 'Descripcion del producto' />
-            <input className = 'statePrduct' type="text" placeholder = 'Estado del producto (disponible o no disponible)' />
-            <input className = 'ValuePrduct' type="number" placeholder = 'Valor unitario'/>
-            <button className = 'RegisterProductboton'>Confirmar y registrar</button>
-        </form>
-        </div> 
+		<div className="box1">
+            <p className="interfaz_RegProducto">Registro de productos</p>
+            
+			<div className="columna1">
+                <div className="IdProducto">
+                    <p>Crear ID del Producto</p>
+					<input className= 'idinput' type="text" name="user" required />
+                    {/* <input type="submit" value="Crear"/>  */ }
+            	</div>
+
+            <div className="descripcion">
+                <p className='txtdescription'>Descripción del Producto</p>
+				<input type="text" name="user"/>
+				
+            </div>
+
+			<div className="Idproducto1">
+				<form className="">
+					<label>
+						Estado:
+					<select className='selectstate'>
+						<option>Disponible</option>
+						<option>No Disponible</option>
+					</select>
+					</label>
+				</form>
+				
+				<p>Valor Unitario:
+				<input className='inputvalue' type="text" name="user" />
+				</p>
+			</div>
+
+			<div className="botonRegistrar">
+				<input type="submit" value="Registrar"/>
+			</div>
+           
+            </div>
+			
+		</div>		
+       
+    
     )
 }
 

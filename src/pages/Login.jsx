@@ -32,7 +32,7 @@ const Login = () => {
                    </Link> 
                </div>
                <div>
-                   <Link to = '/Admin'>
+                   <Link to = '/admin/RegistroProductos'>
                    <button type='submit'>Iniciar sesión</button>
                    </Link>
                </div>
