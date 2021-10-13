@@ -2,8 +2,8 @@ import Login from 'pages/Login';
 import Registro from 'pages/Registro';
 import Index from 'pages/Index';
 import Admin from 'pages/admin/Index';
-import Clientes from 'pages/admin/Clientes';
-import Vehiculos  from 'pages/admin/Vehiculos';
+import Registroproductos  from 'pages/admin/RegistroProductos';
+import Maestroproductos from 'pages/admin/MaestroProductos';
 
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import 'styles/styles.css'
@@ -15,14 +15,14 @@ function App() {
   return (
   <Router>
     <Switch>
-    <Route path ={['/admin','/admin/vehiculos','/admin/clientes']} >
+    <Route path ={['/admin','/admin/RegistroProductos','/admin/MaestroProductos']} >
       <PrivateLayout>
         <Switch>
-          <Route path ='/admin/vehiculos'>
-            <Vehiculos/>
+          <Route path ='/admin/RegistroProductos'>
+            <Registroproductos/>
           </Route>
-          <Route path ='/admin/clientes'>
-            <Clientes/>
+          <Route path ='/admin/MaestroProductos'>
+            <Maestroproductos/>
           </Route>
           <Route path ='/admin'>
             <Admin/>
