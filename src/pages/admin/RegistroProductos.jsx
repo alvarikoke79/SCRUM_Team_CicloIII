@@ -7,7 +7,7 @@ const vehiculos = () => {
 
         
 		<div className="box1">
-            <p className="interfaz_RegProducto">Registro de productos</p>
+            <p className="interfaz_RegProducto">Registro de productos:</p>
             
 			<div className="columna1">
                 <div className="IdProducto">
@@ -38,8 +38,8 @@ const vehiculos = () => {
 				</p>
 			</div>
 
-			<div className="botonRegistrar">
-				<input type="submit" value="Registrar"/>
+			<div>
+			<button className ='btnRegister' type='submit'>Registrar</button>
 			</div>
            
             </div>

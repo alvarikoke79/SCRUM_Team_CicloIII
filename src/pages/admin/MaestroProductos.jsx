@@ -4,12 +4,12 @@ const clientes = () => {
     return (
         <div className="box1">
 			<div className="columna1">
-				<p className="titulo">Maestro de Productos</p>
+				<l2 className="title">Maestro de Productos:</l2>
 				<form action="">
 				<div className="Idproducto">
 					<p>ID de producto:</p>
 					<input type="text" name="user" required />
-					<input type="submit" value="Buscar"/>
+					<button className ='btnSearch' type='submit'>Buscar</button>
 				</div>
 				<div className="Idproducto1">
 					<p>Valor Unitario:</p>

@@ -40,6 +40,7 @@
     justify-content:center;
     flex-wrap: 100%;
     align-items: center;
+    background-color: #DFE6F1;
     /*overflow-y: scroll;*/
 }
 /*navbar*/
@@ -99,7 +100,8 @@
 .mainLogin{
 display:flex;
 width:100%;
-margin-left: 100px;
+height: 100%;
+margin-left: 80px;
 margin-right: 100px;
 background: #ffffff;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
@@ -122,7 +124,7 @@ margin-right: 10px;
 .logologin{
     width: 410px;
     height: 214px;
-    margin-left: 30px;
+    margin-left: -10px;
 }
 /*titulo login*/
 .titleLogin{
@@ -132,18 +134,16 @@ margin-right: 10px;
     font-size: 30px;
     line-height: 36px;
     font-weight: 800px;   
-
 }
 .formLogin{
     display:flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
     max-width: 448px;
-    margin-left: 60px;
+    margin-left: 20px;
     margin-right: 40px;
-    margin-bottom: 15px;
-    
+    margin-bottom: 30px;
 }
 
 /*inputs del login*/
@@ -151,6 +151,7 @@ margin-right: 10px;
    width:100%;
    padding: 3px;
    border-top-left-radius:1px 1px 6px;
+   margin-bottom: 2px;
 }
 .inputp{
     width:100%;
@@ -171,9 +172,12 @@ margin-right: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
  }
-
+ .buttonsl{
+  display: flex;
+  align-content: center;
+}
  /*-------------Pagina registro de productos------------*/
- /*formulario Productos*/
+ 
  
 .columna1 p{
   display:flex;
@@ -198,11 +202,15 @@ margin-right: 10px;
 
 .interfaz_RegProducto {
     font-family: sans-serif;
-    font-size: 2vw;
+    color: #0c0c0c; 
+    font-size:xx-large;
+    font-stretch: expanded;
     margin-bottom: 2vw;
     margin-top: 5vw;
-    text-align: center;
+    margin-left: 4vw;
+    
 }
+
 .moduloID{
     height: 40vw;
     font-family: sans-serif;
@@ -237,16 +245,23 @@ margin-right: 10px;
 .inputvalue{
   margin-left: 0.5vw;
 }
-.botonRegistrar input[type="submit"]{
-  background-color: #3b61a7;
-  width: 13vw;
-  height: 3vw;
-  border-radius: 1vw;
-  color: #FFFFFF;
-  border: 0px;
-  font-size: 1.5vw;
-  margin-top: 3vw;
-  margin-left:35%;
+
+.btnRegister{
+    background-color: #3b61a7;
+    width: 13vw;
+    height: 3vw;
+    border-radius: 1vw;
+    color: #FFFFFF;
+    border: 0px;
+    font-size: 1.5vw;
+    margin-left: 2vw;
+  
+  }
+  .btnRegister:hover {background-color: #869fcf}
+  .btnRegister:active{
+     background-color: #1E4A9A;
+     box-shadow: 0 5px #666;
+     transform: translateY(2px);
 }
 
 
@@ -254,7 +269,7 @@ margin-right: 10px;
 /*-----------------Maestro de productos ---------------*/
 
 .box1{
-  width: 100%;
+  width: 70%;
   float: left;
   background-color: #DFE6F1;
 }
@@ -264,17 +279,22 @@ margin-right: 10px;
     float: left;
     margin: 2vw;
 }
+
 .columna1 p{
-  font-size: 1.7vw;
+  font-size: 2vw;
 }
-.titulo{
-  color: #0c0c0c;
-  margin: 3vw;
-  font-size: 1.5vw;
+
+.title{
+  color: #0c0c0c; 
+  
+  margin-left: 2vw;
+  font-size:xx-large;
+  font-stretch: expanded;
+
 }
 .Idproducto{
   margin: 2vw;
-  margin-top: 4vw;
+  margin-top: 3vw;
   margin-right:2vw;
 }
 .Idproducto p{
@@ -313,6 +333,23 @@ margin-right: 10px;
   border: 0px;
   font-size:1.5vw;
 }
+.btnSearch{
+  background-color: #3b61a7;
+  width: 13vw;
+  height: 3vw;
+  border-radius: 1vw;
+  color: #FFFFFF;
+  border: 0px;
+  font-size: 1.5vw;
+  margin-left: 2vw;
+
+}
+.btnSearch:hover {background-color: #869fcf}
+.btnSearch:active{
+   background-color: #1E4A9A;
+   box-shadow: 0 5px #666;
+   transform: translateY(2px);
+   }
 .botons {
   display:flex;
   align-content: center;
@@ -332,7 +369,7 @@ margin-right: 10px;
 .btnEdit:active{
    background-color: #1E4A9A;
    box-shadow: 0 5px #666;
-   transform: translateY(4px);
+   transform: translateY(2px);
    }
 .btnSave{
   background-color: #3b61a7;
@@ -344,7 +381,12 @@ margin-right: 10px;
   font-size: 1.5vw;
   margin-left: 9vw;
 }
-
+.btnSave:hover {background-color: #869fcf}
+.btnSave:active{
+   background-color: #1E4A9A;
+   box-shadow: 0 5px #666;
+   transform: translateY(2px);
+   }
 .DetalleProducto{
   margin: 2vw;
 }

@@ -31,14 +31,16 @@ const Login = () => {
                 ¿olvidaste tu contraseña?
                    </Link> 
                </div>
-               <div>
+               <div className = 'buttonsl'>
+               <div >
                    <Link to = '/admin/RegistroProductos'>
                    <button type='submit'>Iniciar sesión</button>
                    </Link>
                </div>
                <div>0</div>
-               <div>
-                   <button>iniciar con google</button>
+                <div>
+                <button>iniciar con google</button>
+                </div>
                </div>
            </form>
            </div>
