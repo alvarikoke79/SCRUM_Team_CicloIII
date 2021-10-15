@@ -1,5 +1,5 @@
 import React from 'react';
-/*import ImgLogo from 'logo192.png';*/
+import ImgLogo from './ImgLogo'
 import { Link } from 'react-router-dom';
 
 const sidebar = () => {
@@ -7,7 +7,7 @@ const sidebar = () => {
         <nav className='sidebarmain'>
           
         <Link to='/admin/RegistroProductos'>
-    <label htmlFor="">Control Sales</label>
+        <ImgLogo/>
         </Link>
 
         <div>

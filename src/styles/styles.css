@@ -539,7 +539,12 @@ tr:hover td{
 .sidebarbotondiv{
   display:flex;
   align-items: center;
-  
+
+}
+.logoSidebar{
+  margin-top: 1vw;
+  width: 200px;;
+  height: 100px;
 }
 .sidebarBotons{
   
