@@ -22,9 +22,37 @@ const MaestroProductos = () => {
 					<p>Estado:</p>
 					<input type="text" name="state" />
 				</div>
-				<div className="DetalleProducto">
+				<div className="Idproducto1">
 					<p>Descripción del producto:</p>
 					<input type="text" name="Description" />
+				</div>
+				<div>
+					
+
+				<table className='tabla'>
+                <thead>
+                    <tr>
+                        <th>ID producto</th>
+                        <th>Valor Unitario</th>
+                        <th>Estado del Producto</th>
+                        <th>Descripcion del Producto</th>
+                    </tr>
+                </thead>
+                <tbody>
+					{/*
+                 
+                     {productosFiltrados.map((producto) => {
+                        return (
+                            <FilaProducto 
+                            key={nanoid()} 
+                            producto={producto} 
+                            setEejecutarConsulta={setEejecutarConsulta}
+                            />
+                            )
+                    })}
+				*/}
+                </tbody>
+            </table>
 				</div>
 				<div className="botons">
 				<button className ='btnEdit' type='submit'>Editar</button>

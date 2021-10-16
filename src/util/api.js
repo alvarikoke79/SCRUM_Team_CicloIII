@@ -11,7 +11,7 @@ const getToken = () => {
 export const registrarProductos = async (data, successCallback, errorCallback) => {
     const options = {
       method: 'POST',
-      url: 'http://localhost:5000/productos/nuevo',
+      url: 'http://localhost:5000/productos',
       headers: { 'Content-Type': 'application/json', Authorization: getToken() },
       data,
     };
