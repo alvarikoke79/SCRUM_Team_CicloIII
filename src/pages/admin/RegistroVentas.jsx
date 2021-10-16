@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { /*useEffect, useState,*/ useRef } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { crearVenta } from 'util/api';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,7 +18,7 @@ const RegistroVentas = () => {
       {
         idVenta: nuevaVenta.idVenta,
         ValorTotalVenta: nuevaVenta.ValorTotalVenta,
-        CantidadVent: nuevaVenta.CantidadVent,
+        CantidadVenta: nuevaVenta.CantidadVenta,
         precioUniVenta: nuevaVenta.precioUniVenta,
         fechaVenta: nuevaVenta.fechaVenta,
         ccCliente: nuevaVenta.ccCliente,
@@ -104,7 +104,7 @@ const RegistroVentas = () => {
 							
 							</section>
 							<div className="btn-cambios">
-						<button className="botonCambios" type="submit">
+						<button className="botonCambios" type='submit'>
 						Registrar Venta</button>
 						<ToastContainer />
 					</div>
