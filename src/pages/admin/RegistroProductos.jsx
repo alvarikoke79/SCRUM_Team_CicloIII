@@ -51,7 +51,6 @@ const RegistroProductos = () => {
                 className='idinput'
                 type="text"
                 name='idProduct'
-                placeholder='000001'
                 required
               />
               {/* <input type="submit" value="Crear"/>  */}
