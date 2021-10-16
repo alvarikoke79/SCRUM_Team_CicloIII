@@ -16,9 +16,11 @@ const crearProducto = async (datosProducto,callback)=>{
     console.log('llaves:  ', Object.keys(datosProducto)); //forma de sacvar las llaves del objeto de entrada
     //se valida si todas las keys están y si estan bien nombradas
     if(
-        Object.keys(datosProducto).includes('name') &&
-        Object.keys(datosProducto).includes('value') &&
-        Object.keys(datosProducto).includes('id_prod') 
+        Object.keys(datosProducto).includes('idProduct') &&
+        Object.keys(datosProducto).includes('DescriptionProduct') &&
+        Object.keys(datosProducto).includes('stateProduct') &&
+        Object.keys(datosProducto).includes('unitValueProduct')
+
     ){ 
         //implmentar código para crear producto en la base de datos 
         //Dentro de la colección ControlSales se crea la base de datos productos  

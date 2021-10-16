@@ -20,6 +20,7 @@ const conectarBD = (callback)=>{
     client.connect((err,db)=>{
         if(err){
             console.error("error conectando a la base de datos");
+            return 'error';
         }
         conexion = db.db('ControlSales'); //se conecta a la colección ControlSales
         console.log("conexion exitosa");

@@ -4,10 +4,11 @@
 //import con el type module en el package.json
 import  Express  from "express";
 import dotenv from 'dotenv';
-
+import Cors from 'cors'
 
 import {conectarBD} from './db/db.js' //se trae la función de conexión a la base de datos y la variable de conexion
 import rutasProducto from "./views/productos/rutas.js";
+import rutasVentas from "./views/ventas/rutas.js";
 dotenv.config({path: './.env'}); //se llama el archivo por medio de un config y se coloca la dirección donde se encuentra
 
 
@@ -18,8 +19,9 @@ const app = Express();
 
 //funciones que sirven en express, app.use me permite usar diferentes herramientas ejemplo JSON 
 app.use(Express.json()); //esto permit eque cuando llegue un json, lo pasa un objeto que se peude utilizar 
-//app.use(Cors());
+app.use(Cors());
 app.use(rutasProducto)
+app.use(rutasVentas)
 //conectarse a la base de datos
 
 
