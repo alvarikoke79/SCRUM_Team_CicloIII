@@ -1,51 +1,43 @@
 import React, { useEffect, useState, useRef } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import {registrarProductos} from 'util/api';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { registrarProductos } from "util/api";
 
 const RegistroProductos = () => {
-
-
-const form = useRef(null);
-const submitForm = async (e) => {
-e.preventDefault();
+  const form = useRef(null);
+  const submitForm = async (e) => {
+    e.preventDefault();
     const fd = new FormData(form.current);
 
     const nuevoProducto = {};
     fd.forEach((value, key) => {
       nuevoProducto[key] = value;
-     
     });
 
     await registrarProductos(
       {
         idProduct: nuevoProducto.idProduct,
         DescriptionProduct: nuevoProducto.DescriptionProduct,
+        stateProduct: nuevoProducto.stateProduct,
         unitValueProduct: nuevoProducto.unitValueProduct,
-        statePrduct: nuevoProducto.statePrduct,
       },
       (response) => {
         console.log(response.data);
-       
-        toast.success('Producto agregado con éxito');
+        toast.success("Producto agregado con éxito");
       },
       (error) => {
         console.error(error);
-        toast.error('Error creando un producto');
+        toast.error("Error creando un producto");
       }
     );
-  }
-    
-	
- 	/*
+  };
+
+  /*
 	const enviaralBackend = () =>{
 	console.log("prueba enviar")
 	toast("Registro exitoso!!");
 	}
 	*/
-
-	
-	
 
   return (
     <div className="box1">
@@ -56,44 +48,48 @@ e.preventDefault();
             <label htmlFor="idProduct">
               Crear ID del Producto
               <input
-                className="idinput"
+                className='idinput'
                 type="text"
-                name="idProduct"
+                name='idProduct'
                 required
               />
               {/* <input type="submit" value="Crear"/>  */}
             </label>
           </div>
           <div className="descripcion">
-            <label htmlFor='DescriptionProduct' className="txtdescription">
+            <label htmlFor="DescriptionProduct" className="txtdescription">
               Descripción del Producto
-              <input type="text" name="DescriptionProduct" required />
+              <input type="text" 
+              name='DescriptionProduct' 
+              required />
             </label>
           </div>
           <div className="Idproducto1">
             <label htmlFor="StateProduct">
               Estado:
-              <select className="selectstatePrduct" name="statePrduct">
+              <select className="selectstatePrduct" 
+              name='stateProduct'>
                 <option>Disponible</option>
                 <option>No Disponible</option>
               </select>
             </label>
             <label htmlFor="unitValueProduct">
               Valor Unitario:
-              <input className="inputvalue" type="text" name="unitValueProduct" />
+              <input
+                className="inputvalue"
+                type="text"
+                name='unitValueProduct'
+              />
             </label>
           </div>
           <div>
-            <button 
-		
-			className="btnRegister" type="submit">
+            <button className="btnRegister" type="submit">
               Registrar
             </button>
-			<ToastContainer />
+            <ToastContainer />
           </div>
         </form>
       </div>
-	
     </div>
   );
 };

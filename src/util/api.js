@@ -4,11 +4,14 @@ const getToken = () => {
   return `Bearer ${localStorage.getItem('token')}`;
 };
 
+
+
+
  //CRUD DE PRODUCTOS
 export const registrarProductos = async (data, successCallback, errorCallback) => {
     const options = {
       method: 'POST',
-      url: 'http://localhost:3000/admin/RegistroProductos/',
+      url: 'http://localhost:5000/productos/nuevo',
       headers: { 'Content-Type': 'application/json', Authorization: getToken() },
       data,
     };
@@ -20,7 +23,7 @@ export const registrarProductos = async (data, successCallback, errorCallback) =
 export const crearVenta = async (data, successCallback, errorCallback) => {
   const options = {
     method: 'POST',
-    url: 'http://localhost:5000/ventas',
+    url: 'http://localhost:5000/ventas/nuevo',
     headers: { 'Content-Type': 'application/json', Authorization: getToken() },
     data,
   };
