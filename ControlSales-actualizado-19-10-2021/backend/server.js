@@ -5,6 +5,8 @@
 import  Express  from "express";
 import dotenv from 'dotenv';
 import Cors from 'cors'
+import jwt from 'express-jwt';
+import jwks from 'jwks-rsa';
 
 import {conectarBD} from './db/db.js' //se trae la función de conexión a la base de datos y la variable de conexion
 import rutasProducto from "./views/productos/rutas.js";
@@ -20,6 +22,21 @@ const app = Express();
 //funciones que sirven en express, app.use me permite usar diferentes herramientas ejemplo JSON 
 app.use(Express.json()); //esto permit eque cuando llegue un json, lo pasa un objeto que se peude utilizar 
 app.use(Cors());
+
+var jwtCheck = jwt({
+    secret: jwks.expressJwtSecret({
+        cache: true,
+        rateLimit: true,
+        jwksRequestsPerMinute: 5,
+        jwksUri: 'https://control-sales-app.us.auth0.com/.well-known/jwks.json'
+  }),
+  audience: 'https://api.control.sales.app',
+  issuer: 'https://control-sales-app.us.auth0.com/',
+  algorithms: ['RS256']
+});
+
+app.use(jwtCheck);
+
 app.use(rutasProducto)
 app.use(rutasVentas)
 //conectarse a la base de datos
