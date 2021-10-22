@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import { Dialog, Tooltip } from '@material-ui/core';
 import { nanoid } from 'nanoid';
+import { obtenerProductos } from 'util/api';
+import { editarProducto } from 'util/api';
+import { eliminarProducto } from 'util/api';
+
+
 const MaestroProductos = () => {
 	const [productos,setProductos] = useState([])
 	const [ejecutarConsulta,setEjecutarConsulta] = useState(true)
-	
 
+    //UseEfect para el get de los productos 
 	useEffect(()=>{
-		const obtenerProductos = async () => {
-            const options = { method: 'GET', url: 'http://localhost:5000/productos' };
-            await axios.request(options)
-                .then(function (response) {
-                    console.log();
-                    setProductos(response.data);
-                })
-                .catch(function (error) {
-                    console.error(error);
-                });
-        };
         if (ejecutarConsulta){
-            obtenerProductos();
-            setEjecutarConsulta(false)
+            obtenerProductos(
+                (response)=> {
+                    setProductos(response.data);
+                },
+                (error)=> {
+                    console.error(error);
+                }
+            );
+            setEjecutarConsulta(false);
         }
     },[ejecutarConsulta]);
     return (
@@ -113,7 +113,24 @@ const FilaProducto = ({producto,setEjecutarConsulta}) => {
         descripcion: producto.descripcion,
         estado: producto.estado,
     });
-    const actualizarProducto= async ()=>{
+
+   const actualizarProducto= async()=>{
+    await editarProducto(
+        producto._id,
+        {nombre: infoNuevoProducto.nombre,   
+            valor: infoNuevoProducto.valor, 
+            descripcion: infoNuevoProducto.descripcion, 
+            estado:infoNuevoProducto.estado},
+            (response)=> {
+                console.log(response.data);
+                toast.success("Producto editado con éxito");
+                setEdit(false);
+                setEjecutarConsulta(true)},
+                (error) => {
+                    console.error(error)}
+          
+)};
+    /*const actualizarProducto= async ()=>{
         console.log("esta es toda la info del formulario",infoNuevoProducto);
 
         const options = {
@@ -132,25 +149,24 @@ const FilaProducto = ({producto,setEjecutarConsulta}) => {
             console.error(error);
           });
        
-        };
-    const eliminarProducto= async ()=>{
-        const options = {
-            method: 'DELETE',
-            url: `http://localhost:5000/productos/${producto._id}/`,
-            headers: {'Content-Type': 'application/json'},
-            //data: {id: producto._id}
-          };
+        };*/
+    const deleteProduct= async ()=>{
+        await eliminarProducto(producto._id,
+            (response) => {
+                console.log(response.data);
+                toast.success("Producto eliminado");
+                setEjecutarConsulta(true)},
+                (error) => {
+                    console.error(error);
+                    toast.error("no se pudo eliminar")
+                  }
+
+            
+            )
+            setOpenDialog(false);;
+        
           
-          await axios.request(options).then(function (response) {
-            console.log(response.data);
-            toast.success("Producto eliminado");
-            setEjecutarConsulta(true);
-          }).catch(function (error) {
-            console.error(error);
-            toast.error("no se pudo eliminar")
-          });
-          setOpenDialog(false);
-    };
+                }
     return (
         <tr>
             {edit? (
@@ -223,7 +239,7 @@ const FilaProducto = ({producto,setEjecutarConsulta}) => {
                     <div className='p-8 flex flex-col'>
                         <h1 className='text-gray-900 text-2xl font-bold'>Está seguro de querer eliminar el producto?</h1>
                         <div className='flex w-full items-center justify-center my-4'>
-                        <button onClick={()=>eliminarProducto()} className='mx-2 my-2 px-4 py-2 bg-green-500 text-white hover:bg-green-700 runded-md shadow-md'>Si</button>
+                        <button onClick={()=>deleteProduct()} className='mx-2 my-2 px-4 py-2 bg-green-500 text-white hover:bg-green-700 runded-md shadow-md'>Si</button>
                         <button onClick={()=>setOpenDialog(false)} className='mx-2 my-4 px-4 py-2 bg-red-500 text-white hover:bg-red-700 runded-md shadow-md'>No</button>
                         </div>
                     </div>
