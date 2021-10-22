@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { crearVenta } from 'util/api';
 import 'react-toastify/dist/ReactToastify.css';
 
+/*
 const RegistroVentas = () => {
     const form = useRef(null);
     const submitForm = async (e) => {
@@ -117,4 +118,23 @@ const RegistroVentas = () => {
 			
   )
 }
+*/
+const RegistroVentas =()=>{
+  
+  
+  return(
+  <div>
+    <form>
+      <select>
+        <option>Seleccione un vendedor</option>
+      </select>
+    </form>
+  </div>
+  
+  
+  )
+}
+
 export default  RegistroVentas;
+
+
