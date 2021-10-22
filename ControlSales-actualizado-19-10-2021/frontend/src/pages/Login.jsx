@@ -1,8 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Logo from '../media/logo.jpg'
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Login = () => {
+    const { loginWithRedirect } = useAuth0();
     return (
         <div className = 'mainLogin'>
            <div className = 'txtLogin'>
@@ -14,36 +16,15 @@ const Login = () => {
            </div>
            <div className = 'mainform'>
            <img className='logologin' src={Logo}  alt="logo" />
-           <div><h2 className = 'titleLogin'>Iniciar sesion</h2>
-           <form className = 'formLogin' action="">
-               <div className ='divinputs'>
-               <input className='inpute' type ='email' placeholder = 'dsl@c.com' required/>
-               <input className='inputp' type ='password' placeholder = 'password' required/>
-               </div>
-               <div>
-                <label htmlFor="recuerdame">
-                <input type="checkbox" />
-                recuerdame
-                </label>
-               </div>
-               <div>
-                   <Link to ='/'>
-                ¿olvidaste tu contraseña?
-                   </Link> 
-               </div>
-               <div className = 'buttonsl'>
-               <div >
-                   <Link to = '/admin/RegistroProductos'>
-                   <button type='submit'>Iniciar sesión</button>
-                   </Link>
-               </div>
-               <div>0</div>
-                <div>
-                <button>iniciar con google</button>
-                </div>
-               </div>
+           
+           <form className = 'formLogin' action="">           
+                   <button
+                   className = 'buttonsl' 
+                   type='submit'
+                   onClick={() => loginWithRedirect()}
+                   >Iniciar sesión</button>        
            </form>
-           </div>
+
            </div>
         </div>
     )
