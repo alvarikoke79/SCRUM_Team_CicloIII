@@ -16,15 +16,23 @@ const crearVentas = async (datosVentas,callback)=>{
     console.log('llaves:  ', Object.keys(datosVentas)); //forma de sacvar las llaves del objeto de entrada
     //se valida si todas las keys están y si estan bien nombradas
     if(
+        Object.keys(datosVentas).includes('cantidad') &&
+        Object.keys(datosVentas).includes('vendedor') &&
         Object.keys(datosVentas).includes('idVenta') &&
-        Object.keys(datosVentas).includes('ValorTotalVenta') &&
-        Object.keys(datosVentas).includes('CantidadVenta') &&
-        Object.keys(datosVentas).includes('precioUniVenta') &&
         Object.keys(datosVentas).includes('fechaVenta') &&
         Object.keys(datosVentas).includes('ccCliente') &&
         Object.keys(datosVentas).includes('nombreCliente') &&
+        Object.keys(datosVentas).includes('estadoVenta') &&
+        Object.keys(datosVentas).includes('productos')
+       /* 
+        Object.keys(datosVentas).includes('ValorTotalVenta') &&
+        Object.keys(datosVentas).includes('CantidadVenta') &&
+        Object.keys(datosVentas).includes('precioUniVenta') &&
+        
+        
+        
         Object.keys(datosVentas).includes('ccVendedor') &&
-        Object.keys(datosVentas).includes('nombreVendedor') 
+        Object.keys(datosVentas).includes('nombreVendedor') */
 
     ){ 
         //implmentar código para crear Ventas en la base de datos 
