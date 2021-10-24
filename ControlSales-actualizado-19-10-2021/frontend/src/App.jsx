@@ -19,6 +19,7 @@ function App() {
     domain="control-sales-app.us.auth0.com"
     clientId="oRG693XYOT1YEQvdGvLKaD0d4aNLrai3"
     redirectUri="http://localhost:3000/admin/RegistroProductos"
+    audience = 'https://api.control.sales.app'
     >
   <Router>
     <Switch>
