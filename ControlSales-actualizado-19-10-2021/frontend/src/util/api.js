@@ -85,7 +85,7 @@ export const crearVenta = async (data, successCallback, errorCallback) => {
 };
 
 // CRUD PARA USUARIOS
-
+/* 
 export const obtenerUsuarios = async (successCallback, errorCallback) => {
   const options = {
     method: 'GET',
@@ -117,3 +117,4 @@ export const editarUsuario = async (id, data, successCallback, errorCallback) =>
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
 };
+*/
