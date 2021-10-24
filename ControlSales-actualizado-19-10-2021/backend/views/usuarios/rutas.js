@@ -31,16 +31,17 @@ rutasUsuario.route('/usuarios').get((req,res)=>{
      // a la función query, luego de esta ejecutarse manda a ejecutar generic para que se cree el archivo .json
      // y pueda ser enviado al front como respuesta, ya sea un error o el resultado que se espera 
      //estas son funciones anidadas.
-    
 
     queryAllUsuarios(genercCallback(res));
 });
 
+rutasUsuario.route('/usuarios/self').get((req,res)=>{
+    console.log('alguien hizo get en la ruta usuarios self');
+    consultarUsuario(req.params.id, genercCallback(res));
+});
+
 rutasUsuario.route('/usuarios/:id').get((req,res)=>{
     console.log('alguien hizo get en la ruta usuarios');
-     
-    
-
     consultarUsuario(req.params.id, genercCallback(res));
 });
 
