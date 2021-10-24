@@ -101,7 +101,7 @@ const RegistroProductos = () => {
             <button className="btnRegister" type="submit">
               Registrar
             </button>
-            <ToastContainer />
+            <ToastContainer position='top-right' autoClose={5000}/>
           </div>
         </form>
       </div>
