@@ -14,6 +14,7 @@
     "express-jwt": "^6.1.0",
     "express-oauth2-jwt-bearer": "^1.0.0",
     "jwks-rsa": "^2.0.5",
+    "jwt-decode": "^3.1.2",
     "mogodb": "^0.0.1-security",
     "mongodb": "^4.1.3"
   },

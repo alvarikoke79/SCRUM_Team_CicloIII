@@ -1,5 +1,6 @@
 import {getDB} from '../../db/db.js' //se debe salir de la carpeta usuarios y de la carpeta views
 import { ObjectId } from 'mongodb';
+import jwt_decode from 'jwt-decode';
 
 const queryAllUsuarios = async (callback)=>{
     //se crea la conexion con la base de datos 
@@ -10,9 +11,32 @@ const consultarUsuario = async (id,callback) =>{
     const conexion = getDB();
     await conexion.collection("usuarios").findOne({_id: new ObjectId(id)}, callback);
 };
+const consultarOCrearUsuario = async (req, callback) => {
+    // 6.1. obtener los datos del usuario desde el token
+    const token = req.headers.authorization.split('Bearer ')[1];
+    //console.log(jwt_decode(token));
+    const user = jwt_decode(token)['http://localhost/userData'];
+    console.log(user);
+  
+    // 6.2. con el correo del usuario o con el id de auth0, verificar si el usuario ya esta en la bd o no
+    const baseDeDatos = getDB();
+    await baseDeDatos.collection('usuario').findOne({ email: user.email }, async (err, response) => {
+      console.log('response consulta bd', response);
+      if (response) {
+        // 7.1. si el usuario ya esta en la BD, devuelve la info del usuario
+        callback(err, response);
+      } else {
+        // 7.2. si el usuario no esta en la bd, lo crea y devuelve la info
+        user.auth0ID = user._id;
+        delete user._id;
+        user.rol = 'sin rol';
+        user.estado = 'pendiente';
+        await crearUsuario(user, (err, respuesta) => callback(err, user));
+      }
+    });
+  };
 const crearUsuario = async (datosUsuario,callback)=>{
     //implementar códifo para crear un usuario en la BD
-    
     console.log('llaves:  ', Object.keys(datosUsuario)); //forma de sacvar las llaves del objeto de entrada
     //se valida si todas las keys están y si estan bien nombradas
     if(
@@ -22,8 +46,6 @@ const crearUsuario = async (datosUsuario,callback)=>{
         Object.keys(datosUsuario).includes('rol') &&
         Object.keys(datosUsuario).includes('estado') &&
         Object.keys(datosUsuario).includes('user')
-
-
     ){ 
         //implmentar código para crear usuario en la base de datos 
         //Dentro de la colección ControlSales se crea la base de datos usuarios  
@@ -60,4 +82,9 @@ const eliminarUsuario = async (id,callback)=>{
     await conexion.collection('usuarios').deleteOne(filtroUsuario,callback);
 
 };
-export{queryAllUsuarios, crearUsuario,editarUsuario,eliminarUsuario,consultarUsuario};
+export{queryAllUsuarios, 
+    crearUsuario,
+    editarUsuario,
+    eliminarUsuario,
+    consultarUsuario,
+    consultarOCrearUsuario,};

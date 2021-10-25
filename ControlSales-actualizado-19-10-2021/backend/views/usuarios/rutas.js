@@ -9,7 +9,14 @@
 //después se colocan las lineas para preguntar a la base de datos 
 import Express from 'express';
 import {getDB} from '../../db/db.js' //se debe salir de la carpeta usuarios y de la carpeta views
-import { queryAllUsuarios,crearUsuario,editarUsuario,eliminarUsuario,consultarUsuario } from '../../controllers/usuarios/controller.js';
+import { 
+    queryAllUsuarios,
+    crearUsuario,
+    editarUsuario,
+    eliminarUsuario,
+    consultarUsuario,
+    consultarOCrearUsuario, 
+} from '../../controllers/usuarios/controller.js';
 
 const rutasUsuario = Express.Router(); //se usa para hacer algo similiar a react, es para enlazar las rutas con el server
 
@@ -31,13 +38,13 @@ rutasUsuario.route('/usuarios').get((req,res)=>{
      // a la función query, luego de esta ejecutarse manda a ejecutar generic para que se cree el archivo .json
      // y pueda ser enviado al front como respuesta, ya sea un error o el resultado que se espera 
      //estas son funciones anidadas.
-
     queryAllUsuarios(genercCallback(res));
 });
 
 rutasUsuario.route('/usuarios/self').get((req,res)=>{
     console.log('alguien hizo get en la ruta usuarios self');
-    consultarUsuario(req.params.id, genercCallback(res));
+    consultarOCrearUsuario(req, genercCallback(res))
+    //consultarUsuario(req.params.id, genercCallback(res));
 });
 
 rutasUsuario.route('/usuarios/:id').get((req,res)=>{
