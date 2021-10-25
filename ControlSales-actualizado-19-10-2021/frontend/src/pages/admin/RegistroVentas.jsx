@@ -209,8 +209,8 @@ const RegistroVentas =()=>{
 
    }; 
   return(
-    
-  <div className='flex h-full w-full over-flow-y-scroll items-center justify-center'>
+  <div className="box1">
+    <div className='flex h-full w-full over-flow-y-scroll items-center justify-center'>
     
     <form ref={form} onSubmit={submitForm} className = 'flex flex-col'>
       <h1 className='text-3xl font-extrabold text-gray-900 my-3'>Crear una nueva venta </h1>
@@ -296,6 +296,7 @@ const RegistroVentas =()=>{
        
     </form>
     
+  </div>
   </div>
   
 
