@@ -18,22 +18,23 @@ const PrivateRoute = ({ children }) => {
       localStorage.setItem('token', accessToken);
       console.log(accessToken);
       // 3. enviarle el token a el backend
-    /*  await obtenerDatosUsuario(
+      await obtenerDatosUsuario(
         (response) => {
           console.log('response con datos del usuario', response);
-          setUserData(response.data);
+          
         },
         (err) => {
           console.log('err', err);
         }
-      );*/
+      );
+      console.log(accessToken);
     };
     if (isAuthenticated) {
       fetchAuth0Token();
     }
   }, [isAuthenticated, getAccessTokenSilently]);
 
-  if (isLoading) return <ReactLoading type='balls' color='#3b61a7' height={356} width={180} />;
+  if (isLoading) return <ReactLoading type='balls' color='#3b61a7' height={120} width={60} />;
 
   if (!isAuthenticated) {
     return loginWithRedirect();
