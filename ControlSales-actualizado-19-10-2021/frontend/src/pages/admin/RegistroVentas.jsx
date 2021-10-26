@@ -272,7 +272,7 @@ const RegistroVentas =()=>{
       <select name='vendedor' className='p-2' defaultValue='' required>
         <option disabled value=''>Seleccione un vendedor</option>
         {vendedores.map((el) => {
-          return <option key={nanoid()} value={el._id}>{`${el.nombres} ${el.apellidos}`}</option>;
+          return <option key={nanoid()} value={el._id}>{`${el.name}`}</option>;
         })}
       </select>
       </label>
