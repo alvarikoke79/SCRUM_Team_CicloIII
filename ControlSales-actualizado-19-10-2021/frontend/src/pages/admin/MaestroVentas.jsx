@@ -127,7 +127,7 @@ const FilaVenta = ({venta,setEjecutarConsulta}) => {
             cantidad: infoNuevoVenta.cantidad},
             (response)=> {
                 console.log(response.data);
-                toast.success("Venta editado con éxito");
+                toast.success("Venta modificada con éxito");
                 setEdit(false);
                 setEjecutarConsulta(true)},
                 (error) => {
@@ -158,11 +158,11 @@ const FilaVenta = ({venta,setEjecutarConsulta}) => {
         await eliminarVenta(venta._id,
             (response) => {
                 console.log(response.data);
-                toast.success("Venta eliminado");
+                toast.success("Venta eliminada");
                 setEjecutarConsulta(true)},
                 (error) => {
                     console.error(error);
-                    toast.error("no se pudo eliminar")
+                    toast.error("No se pudo eliminar")
                   }
 
             
