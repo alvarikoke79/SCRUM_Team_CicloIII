@@ -5,6 +5,7 @@ import { nanoid } from 'nanoid';
 import { obtenerProductos } from 'util/api';
 import { editarProducto } from 'util/api';
 import { eliminarProducto } from 'util/api';
+import PrivateComponent from 'components/PrivateComponent';
 
 
 const MaestroProductos = () => {
@@ -160,14 +161,13 @@ const FilaProducto = ({producto,setEjecutarConsulta}) => {
                     console.error(error);
                     toast.error("no se pudo eliminar")
                   }
-
-            
             )
             setOpenDialog(false);;
         
           
                 }
     return (
+        <PrivateComponent roleList={["Administrador","autorizado"]}>
         <tr>
             {edit? (
             <>
@@ -209,6 +209,7 @@ const FilaProducto = ({producto,setEjecutarConsulta}) => {
             
             
             <td>
+                
                 <div className='flex w-full justify-around'>
                     {edit ? (
                         <>
@@ -235,6 +236,7 @@ const FilaProducto = ({producto,setEjecutarConsulta}) => {
                         </>
                         )}
                 </div>
+              
                 <Dialog open={openDialog}>
                     <div className='p-8 flex flex-col'>
                         <h1 className='text-gray-900 text-2xl font-bold'>Está seguro de querer eliminar el producto?</h1>
@@ -245,8 +247,9 @@ const FilaProducto = ({producto,setEjecutarConsulta}) => {
                     </div>
                 </Dialog>
             </td>
-
+          
         </tr>
+        </PrivateComponent>
     )
 }
 	

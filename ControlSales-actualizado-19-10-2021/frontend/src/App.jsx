@@ -10,17 +10,21 @@ import 'styles/styles.css'
 import { Auth0Provider } from "@auth0/auth0-react";
 import PrivateLayout from 'layouts/PrivateLayout';
 import AuthLayout from 'layouts/AuthLayout';
+import { UserContext } from 'context/userContext';
+import { useState } from 'react';
 
 function App() {
-  
+  const[userData,setUserData]=useState({});
   return (
-    <div className='App'>
+    
     <Auth0Provider
     domain="control-sales-app.us.auth0.com"
     clientId="oRG693XYOT1YEQvdGvLKaD0d4aNLrai3"
     redirectUri="http://localhost:3000/admin/RegistroProductos"
     audience = 'https://api.control.sales.app'
     >
+      <div className='App'>
+        <UserContext.Provider value={{userData,setUserData}}>
   <Router>
     <Switch>
     <Route path ={['/admin','/admin/RegistroProductos','/admin/MaestroProductos','/admin/RegistroVentas','/admin/MaestroVentas', '/admin/GestionUsuarios' ]} >
@@ -58,8 +62,10 @@ function App() {
       </Route>
     </Switch>
   </Router>  
-  </Auth0Provider>
+  </UserContext.Provider>
   </div>
+  </Auth0Provider>
+  
   );
 }
 

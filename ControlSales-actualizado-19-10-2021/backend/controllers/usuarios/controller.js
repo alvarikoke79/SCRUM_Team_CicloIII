@@ -7,6 +7,12 @@ const queryAllUsuarios = async (callback)=>{
     const conexion = getDB();
     await conexion.collection("usuarios").find({}).limit(50).toArray(callback);
 };
+
+const crearUsuario = async (datosUsuario, callback) => {
+    const conexion = getDB();
+    await conexion.collection('usuarios').insertOne(datosUsuario, callback);
+  };
+  
 const consultarUsuario = async (id,callback) =>{
     const conexion = getDB();
     await conexion.collection("usuarios").findOne({_id: new ObjectId(id)}, callback);
@@ -14,13 +20,13 @@ const consultarUsuario = async (id,callback) =>{
 const consultarOCrearUsuario = async (req, callback) => {
     // 6.1. obtener los datos del usuario desde el token
     const token = req.headers.authorization.split('Bearer ')[1];
-    //console.log(jwt_decode(token));
+    console.log(jwt_decode(token));
     const user = jwt_decode(token)['http://localhost/userData'];
     console.log(user);
   
     // 6.2. con el correo del usuario o con el id de auth0, verificar si el usuario ya esta en la bd o no
-    const baseDeDatos = getDB();
-    await baseDeDatos.collection('usuario').findOne({ email: user.email }, async (err, response) => {
+    const conexion = getDB();
+    await conexion.collection("usuarios").findOne({ email: user.email }, async (err, response) => {
       console.log('response consulta bd', response);
       if (response) {
         // 7.1. si el usuario ya esta en la BD, devuelve la info del usuario
@@ -35,6 +41,8 @@ const consultarOCrearUsuario = async (req, callback) => {
       }
     });
   };
+
+/*
 const crearUsuario = async (datosUsuario,callback)=>{
     //implementar códifo para crear un usuario en la BD
     console.log('llaves:  ', Object.keys(datosUsuario)); //forma de sacvar las llaves del objeto de entrada
@@ -58,7 +66,7 @@ const crearUsuario = async (datosUsuario,callback)=>{
     }
     
     
-};
+};*/
 
 // para editar se utiliza findOneAndUpdate, esta recibe 3 parámetros (filtro,)
 // upsert:true , si no encuenta el filtro, crea una nueva función 
