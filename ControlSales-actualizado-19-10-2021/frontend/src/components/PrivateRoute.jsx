@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import ReactLoading from 'react-loading';
 import { obtenerDatosUsuario } from 'util/api';
-//import { useUser } from 'context/userContext';
+import { useUser } from 'context/userContext';
 const PrivateRoute = ({ children }) => {
   const { isAuthenticated, isLoading, loginWithRedirect, getAccessTokenSilently } = useAuth0();
- // const { setUserData } = useUser();
+  const {setUserData}=useUser();
 
   useEffect(() => {
     const fetchAuth0Token = async () => {
@@ -21,6 +21,7 @@ const PrivateRoute = ({ children }) => {
       await obtenerDatosUsuario(
         (response) => {
           console.log('response con datos del usuario', response);
+          setUserData(response.data);
           
         },
         (err) => {
@@ -32,7 +33,7 @@ const PrivateRoute = ({ children }) => {
     if (isAuthenticated) {
       fetchAuth0Token();
     }
-  }, [isAuthenticated, getAccessTokenSilently]);
+  }, [isAuthenticated, getAccessTokenSilently,setUserData]);
 
   if (isLoading) return <ReactLoading type='balls' color='#3b61a7' height={120} width={60} />;
 

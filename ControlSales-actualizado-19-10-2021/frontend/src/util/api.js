@@ -48,7 +48,7 @@ export const eliminarProducto= async (id,successCallback, errorCallback)=>{
   
     };
 
-
+/*
 //CRUD DE USUARIOS 
 
 export const obtenerUsuarios = async (successCallback, errorCallback) => {
@@ -70,7 +70,7 @@ export const obtenerUsuarios = async (successCallback, errorCallback) => {
     };
     await axios.request(options).then(successCallback).catch(errorCallback);
   };
-
+*/
 export const editarUsuario= async (id,data,successCallback, errorCallback)=>{
   const options = {
     method: 'PATCH',
@@ -133,7 +133,7 @@ export const eliminarVenta= async (id,successCallback, errorCallback)=>{
 
 
 // CRUD PARA USUARIOS
-/*
+
 export const obtenerUsuarios = async (successCallback, errorCallback) => {
   const options = {
     method: 'GET',
@@ -155,7 +155,7 @@ export const obtenerDatosUsuario = async (successCallback, errorCallback) => {
   };
   await axios.request(options).then(successCallback).catch(errorCallback);
 };
-
+/*
 export const editarUsuario = async (id, data, successCallback, errorCallback) => {
   const options = {
     method: 'PATCH',

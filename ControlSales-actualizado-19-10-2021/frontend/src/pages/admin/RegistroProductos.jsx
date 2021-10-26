@@ -1,3 +1,4 @@
+import PrivateComponent from "components/PrivateComponent";
 import React, { /*useEffect, useState,*/ useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -41,9 +42,12 @@ const RegistroProductos = () => {
 	*/
 
   return (
+
     <div className="box1">
       <p className="interfaz_RegProducto">Registro de productos:</p>
       <div className="columna1">
+    <PrivateComponent roleList={["Administrador","autorizado"]}>
+
         <form ref={form} onSubmit={submitForm}>
           <div className="IdProducto">
             <label htmlFor="idProduct">
@@ -104,8 +108,10 @@ const RegistroProductos = () => {
             <ToastContainer position='top-right' autoClose={5000}/>
           </div>
         </form>
+        </PrivateComponent>
       </div>
     </div>
+   
   );
 };
 

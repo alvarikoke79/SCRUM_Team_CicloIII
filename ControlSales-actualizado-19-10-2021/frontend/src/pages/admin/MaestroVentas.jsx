@@ -1,5 +1,5 @@
 
-import {Link} from 'react-router-dom'
+
 import React, { useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import { Dialog, Tooltip } from '@material-ui/core';
@@ -7,6 +7,7 @@ import { nanoid } from 'nanoid';
 import { obtenerVentas } from 'util/api';
 import { editarVenta } from 'util/api';
 import { eliminarVenta } from 'util/api';
+import PrivateComponent from 'components/PrivateComponent';
 
 const MaestroVentas = () => {
 
@@ -172,6 +173,7 @@ const FilaVenta = ({venta,setEjecutarConsulta}) => {
           
                 }
     return (
+        <PrivateComponent roleList={["Administrador","Vendedor","autorizado"]}>
         <tr>
             {edit? (
             <>
@@ -254,6 +256,7 @@ const FilaVenta = ({venta,setEjecutarConsulta}) => {
             </td>
 
         </tr>
+        </PrivateComponent>
     )
 
     /*return(

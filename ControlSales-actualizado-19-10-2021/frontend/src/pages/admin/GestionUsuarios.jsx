@@ -6,6 +6,7 @@ import { nanoid } from 'nanoid';
 import { obtenerUsuarios } from 'util/api';
 import { editarUsuario } from 'util/api';
 import { eliminarUsuario } from 'util/api';
+import PrivateComponent from 'components/PrivateComponent';
 
 const GestionUsuarios = () => {
 	const [usuarios,setUsuarios] = useState([])
@@ -129,14 +130,11 @@ const TablaUsuarios=({listaUsuarios,setEjecutarConsulta})=>{
             placeholder='Buscar' 
             className='border-2 border-gray-700 px-3 py-1 self-start rounded-md focus:outline-none focus:border-indigo-500'/>
             <h2 className='text-2xl font-extrabold text-green-800'>Todos los usuarios</h2>
-          
             <table className='tabla'>
                 <thead>
                     <tr>
-                        <th>C.C.</th>
-                        <th>Nombres</th>
-                        <th>Apellidos</th>
-						<th>Usuario</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
                         <th>Rol del ususario</th>
                         <th>Estado del usuario</th>
                         <th>Acciones</th>
@@ -164,18 +162,16 @@ const FilaUsuario = ({usuario,setEjecutarConsulta}) => {
     const [openDialog,setOpenDialog]= useState(false)
     const [infoNuevoUsuario,setInfoNuevoUsuario] = useState({
         _id: usuario._id,
-		cedula: usuario.cedula,
-        nombres: usuario.nombres,
-        apellidos: usuario.apellidos,
-		user:usuario.user,
+        nombre: usuario.name,
+		correo:usuario.email,
         rol: usuario.rol,
         estado: usuario.estado,
 		
     });
     const actualizarUsuario= async ()=>{
         await editarUsuario(usuario._id,
-            { nombres: infoNuevoUsuario.nombres, apellidos: infoNuevoUsuario.apellidos,
-                user: infoNuevoUsuario.user, rol: infoNuevoUsuario.rol,
+            { nombre: infoNuevoUsuario.name, 
+                correo: infoNuevoUsuario.correo, rol: infoNuevoUsuario.rol,
                  estado:infoNuevoUsuario.estado},
 
             (response)=> {
@@ -207,15 +203,15 @@ const FilaUsuario = ({usuario,setEjecutarConsulta}) => {
             }
         
     return (
+        <PrivateComponent roleList={["Administrador","autorizado"]}>
         <tr>
             {edit? (
             <>
-                <td>{infoNuevoUsuario.cedula}</td>
+                <td>{infoNuevoUsuario.nombre}</td>
                 
                  
-                <td>{infoNuevoUsuario.nombres}</td>
-                <td>{infoNuevoUsuario.apellidos}</td>
-				 <td>{infoNuevoUsuario.user}</td>
+                <td>{infoNuevoUsuario.correo}</td>
+               
 				<td> 
 				
 				<select 
@@ -225,6 +221,7 @@ const FilaUsuario = ({usuario,setEjecutarConsulta}) => {
                     onChange={(e)=>setInfoNuevoUsuario({ ...infoNuevoUsuario,rol: e.target.value})}>
 						<option>Administrador</option>
 						<option>Vendedor</option>
+                        <option>sin rol </option>
 					</select>
                     </td>
 				<td>
@@ -242,10 +239,9 @@ const FilaUsuario = ({usuario,setEjecutarConsulta}) => {
             </>
             ):(
             <>
-            <td>{usuario.cedula}</td>
-            <td>{usuario.nombres}</td>
-            <td>{usuario.apellidos}</td>
-			<td>{usuario.user}</td>
+         
+            <td>{usuario.name}</td>
+            <td>{usuario.email}</td>
 			<td>{usuario.rol}</td>
             <td>{usuario.estado}</td>
             </>
@@ -291,6 +287,7 @@ const FilaUsuario = ({usuario,setEjecutarConsulta}) => {
             </td>
 
         </tr>
+        </PrivateComponent>
     )
 }
 export default GestionUsuarios;

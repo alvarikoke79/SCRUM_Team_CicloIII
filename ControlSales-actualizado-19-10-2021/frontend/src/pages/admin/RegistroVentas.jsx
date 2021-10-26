@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { obtenerUsuarios } from 'util/api';
 import { obtenerProductos } from 'util/api';
 import { nanoid } from 'nanoid';
+import PrivateComponent from 'components/PrivateComponent';
 
 /*
 const RegistroVentas = () => {
@@ -211,7 +212,7 @@ const RegistroVentas =()=>{
   return(
   <div className="box1">
     <div className='flex h-full w-full over-flow-y-scroll items-center justify-center'>
-    
+    <PrivateComponent roleList={["Administrador","Vendedor","autorizado"]}>
     <form ref={form} onSubmit={submitForm} className = 'flex flex-col'>
       <h1 className='text-3xl font-extrabold text-gray-900 my-3'>Crear una nueva venta </h1>
     
@@ -295,6 +296,7 @@ const RegistroVentas =()=>{
        </div>
        
     </form>
+    </PrivateComponent>
     
   </div>
   </div>
