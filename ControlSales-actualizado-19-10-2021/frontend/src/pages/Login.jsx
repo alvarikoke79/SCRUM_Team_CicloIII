@@ -8,10 +8,10 @@ const Login = () => {
     return (
         <div className = 'mainLogin'>
            <div className = 'txtLogin'>
-            <span className='txtlanding'>Control sales te permitirá registrar y gestionar los produtos de tu
+            <span className='txtlanding'>Control Sales te permitirá registrar y gestionar los productos de tu
             tienda. También podrás registrar y gestionar las ventas tanto
             fisicas como virtuales. Si tu empresa ya esta usando Control Sales,
-            haz click al botón Iniciar Sesión y accede con tu cuenta de correo de
+            haz click en el botón Iniciar Sesión y accede con tu cuenta de correo de
             Google.</span>
            </div>
            <div className = 'mainform'>
