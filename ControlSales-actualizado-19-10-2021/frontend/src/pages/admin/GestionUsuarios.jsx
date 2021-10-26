@@ -30,7 +30,7 @@ return(
 
 
 <div className="box1">
-			<p className="tituloGu">Gestion de usuarios</p>
+			<p className="tituloGu">Gestión de usuarios</p>
 
 			<div className='flex flex-col items-center justify-center w-full p-8'>
 			
@@ -50,8 +50,8 @@ return(
 					<label>
 						Buscar: 
 						<select>
-							<option>Documento de indetidad</option>
-							<option>codigo</option>
+							<option>Documento de identidad</option>
+							<option>Código</option>
 							<option>Nombre del usuario</option>
 							<option>Estado</option>
 						</select>
@@ -106,7 +106,7 @@ return(
 }
 
 const TablaUsuarios=({listaUsuarios,setEjecutarConsulta})=>{
-	const [busqueda,setBusqueda]=useState(''); //busqueda es el nombres que se está tomando del cuadro de busqueda
+	const [busqueda,setBusqueda]=useState(''); //búsqueda es el nombres que se está tomando del cuadro de busqueda
     const [usuariosFiltrados,setUsuariosFiltrados] = useState(listaUsuarios) //estados que en un inicio tiene tdo los usuarios del backend
     useEffect(()=>{
         //filter crea un objeto de la lista de prodcutos y a ese objeto hay que buscar las plabras incluidas en el cedula o nombres, etc. 
