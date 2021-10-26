@@ -21,7 +21,7 @@ const Sidebar = () => {
         <div className='my-3'>
         <Ruta ruta='/admin' nombre='Perfil' usuario={user} />
         <Ruta ruta='/admin/RegistroProductos' nombre='Registro de Productos' />
-          <Ruta ruta='/admin/MaestroProductos' nombre='Maestro de productos' />
+          <Ruta ruta='/admin/MaestroProductos' nombre='Maestro de Productos' />
           <Ruta ruta='/admin/RegistroVentas' nombre='Registro de Ventas' />
           <Ruta ruta='/admin/MaestroVentas' nombre='Maestro de Ventas' />
           <Ruta ruta='/admin/GestionUsuarios' nombre='Gestión de Usuarios' />
