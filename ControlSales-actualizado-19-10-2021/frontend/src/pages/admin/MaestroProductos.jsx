@@ -80,7 +80,7 @@ const TablaProductos=({listaProductos,setEjecutarConsulta})=>{
                         <th>Id</th>
                         <th>Nombre del Producto</th>
                         <th>Valor del Producto</th>
-                        <th>Descripcion del Producto</th>
+                        <th>Descripción del Producto</th>
                         <th>Estado del Producto</th>
                         <th>Acciones</th>
                     </tr>
@@ -158,7 +158,7 @@ const FilaProducto = ({producto,setEjecutarConsulta}) => {
                 setEjecutarConsulta(true)},
                 (error) => {
                     console.error(error);
-                    toast.error("no se pudo eliminar")
+                    toast.error("No se pudo eliminar el producto")
                   }
 
             
