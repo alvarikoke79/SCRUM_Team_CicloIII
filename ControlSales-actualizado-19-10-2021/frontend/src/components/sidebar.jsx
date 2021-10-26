@@ -24,7 +24,7 @@ const Sidebar = () => {
           <Ruta ruta='/admin/MaestroProductos' nombre='Maestro de productos' />
           <Ruta ruta='/admin/RegistroVentas' nombre='Registro de Ventas' />
           <Ruta ruta='/admin/MaestroVentas' nombre='Maestro de Ventas' />
-          <Ruta ruta='/admin/GestionUsuarios' nombre='Gestion de Usuarios' />
+          <Ruta ruta='/admin/GestionUsuarios' nombre='Gestión de Usuarios' />
         </div>
         <button className = 'sidebarBotons' onClick={() => cerrarSesion()}>Cerrar Sesión</button>
       </nav>
