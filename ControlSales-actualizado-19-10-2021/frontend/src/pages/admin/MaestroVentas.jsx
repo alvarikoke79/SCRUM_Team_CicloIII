@@ -80,7 +80,7 @@ const TablaVentas=({listaVentas,setEjecutarConsulta})=>{
                 <thead>
                     <tr>
                         <th>Id venta</th>
-                        <th>fecha Venta</th>
+                        <th>Fecha Venta</th>
                         <th>C.C. cliente</th>
                         <th>Vendedor</th>
                         <th>Total venta</th>
