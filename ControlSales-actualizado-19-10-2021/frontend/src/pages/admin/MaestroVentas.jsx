@@ -210,7 +210,7 @@ const FilaVenta = ({venta,setEjecutarConsulta}) => {
             <td>{venta.idVenta}</td>
             <td>{venta.fechaVenta}</td>
             <td>{venta.ccCliente}</td>
-            <td>{`${venta.vendedor.nombres} ${venta.vendedor.apellidos}`}</td>
+            <td>{`${venta.vendedor.name}`}</td>
             <td>{venta.cantidad}</td>
             <td>{venta.estadoVenta}</td>
             </>
